@@ -26,7 +26,7 @@ export default function ResultsStep({ prediction }: ResultsStepProps) {
       <Alert variant={isSevere ? "destructive" : "default"} className="border-l-4">
         {isSevere ? <AlertCircle className="h-5 w-5" /> : <CheckCircle2 className="h-5 w-5" />}
         <AlertTitle className="text-lg font-semibold">Prédiction</AlertTitle>
-        <AlertDescription className="text-base">{prediction}</AlertDescription>
+        <AlertDescription className="text-base text-blue-500">{prediction}</AlertDescription>
       </Alert>
 
       <Card className="mt-6 bg-muted/40">

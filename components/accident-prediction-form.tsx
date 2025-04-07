@@ -121,7 +121,9 @@ export default function AccidentPredictionForm() {
       // Mock prediction result
       const severityLevel = data.casualty_severity === "1" ? "Grave" : "Légère"
       // change url to your backend endpoint
-      const response = await axios.post("/api/predict", data)
+      const response = await axios.post("http://127.0.0.1:8000/predict", data)
+      console.log(response.data);
+      
       setPrediction(response.data.prediction)
       setPrediction(`Accident avec blessure ${severityLevel.toLowerCase()}`)
 
